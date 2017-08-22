@@ -23,9 +23,6 @@ for line in fil.readlines():
         break
 flights_data = flights_data.replace("var flightsData = ","").strip()
 flights_data = flights_data[:-1]
-fil = open("flights_data.json","w")
-fil.write(flights_data)
-fil.close()
 l=json.loads(flights_data)
 
 for i in range(len(l)):  
