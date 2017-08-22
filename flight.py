@@ -20,9 +20,9 @@ fil = open("html.txt","r")
 for line in fil.readlines():
     if "flightsData" in line:
         flights_data = line
-        break
-flights_data = flights_data.replace("var flightsData = ","").strip()
-flights_data = flights_data[:-1]
+        break       
+flights_data = flights_data.replace("var flightsData = ","").strip() ##remove the term "var flightsData"  
+flights_data = flights_data[:-1]  #remove ; at the last
 l=json.loads(flights_data)
 
 for i in range(len(l)):  
